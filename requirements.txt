@@ -3,3 +3,4 @@ uvicorn
 python-dotenv
 requests
 paddleocr
+paddlepaddle==2.5.0
