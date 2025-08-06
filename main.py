@@ -9,7 +9,7 @@ import shutil
 load_dotenv()
 
 app = FastAPI()
-ocr = PaddleOCR(use_angle_cls=False, use_gpu=False)
+ocr = PaddleOCR(use_angle_cls=False, device="cpu")
 
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
