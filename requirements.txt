@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+paddleocr
+paddlepaddle==2.5.2
+python-multipart
+python-dotenv
+requests
