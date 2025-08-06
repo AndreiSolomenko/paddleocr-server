@@ -2,5 +2,6 @@ fastapi
 uvicorn
 python-dotenv
 requests
+setuptools>=65.0.0
 paddleocr==3.1.0
 paddlepaddle==3.1.0
