@@ -132,7 +132,7 @@ public class OCRController {
                 throw new RuntimeException("No rec_texts found");
             }
 
-            return String.join("\n", recTexts);
+            return String.join(" ", recTexts);
 
         } finally {
             if (filePath != null) {
