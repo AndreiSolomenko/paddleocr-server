@@ -11,8 +11,8 @@ RUN apt-get update && apt-get install -y \
 
 COPY --from=build /target/highlight-server-spring-0.0.1-SNAPSHOT.jar highlightserverspring.jar
 
-RUN mkdir -p /usr/share/tesseract-ocr/4.00/tessdata
-COPY --from=build /target/classes/tessdata /usr/share/tesseract-ocr/4.00/tessdata
+#RUN mkdir -p /usr/share/tesseract-ocr/4.00/tessdata
+#COPY --from=build /target/classes/tessdata /usr/share/tesseract-ocr/4.00/tessdata
 
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","highlightserverspring.jar"]
