@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Verification</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body style="display: flex; flex-direction: column; align-items: center; padding-top: 2rem">
+<h2>Please verify you are human</h2>
+<form action="/verify-captcha" method="POST">
+    <div class="g-recaptcha" data-sitekey="6Ld9tqUrAAAAAH6TNQAXCAeZzQTatwyJieYavqCm"></div>
+    <br/>
+    <input type="hidden" name="device_id" value="">
+    <button type="submit">Verify</button>
+</form>
+</body>
+</html>

@@ -228,4 +228,12 @@ public class OCRController {
     public String root() {
         return "ok";
     }
+
+
+    @GetMapping("/captcha")
+    public String captchaPage() {
+        return "captcha";
+    }
+
+
 }
