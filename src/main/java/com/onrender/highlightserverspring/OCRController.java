@@ -4,6 +4,7 @@ import net.sourceforge.tess4j.*;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;
@@ -231,8 +232,11 @@ public class OCRController {
 
 
     @GetMapping("/captcha")
-    public String captchaPage() {
-        return "captcha";
+    public ModelAndView captchaPage(@RequestParam String device_id) {
+        ModelAndView mav = new ModelAndView("captcha");
+        mav.addObject("deviceId", device_id);
+        mav.addObject("siteKey", "YOUR_SITE_KEY");
+        return mav;
     }
 
 
